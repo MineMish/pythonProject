@@ -55,13 +55,15 @@ class Student:
     def live(self, day):
         day = " День " + str(day) + " ученика(цы) " + self.name + " из жизни в колледже "
         print(f"{day:+^60}")
-        live_cube = random.randint(1, 3)
+        live_cube = random.randint(1, 4)
         if live_cube == 1:
             self.to_study()
         elif live_cube == 2:
             self.to_sleep()
         elif live_cube == 3:
             self.to_chill()
+        elif live_cube == 4:
+            self.to_work()
         self.end_of_day()
         self.is_alive()
 

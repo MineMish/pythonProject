@@ -8,25 +8,25 @@ class Student:
         self.alive = True
 
     def to_study(self):
-        print(" Время учёбы ")
+        print(" 👨‍🎓Время учёбы👨‍🎓 ")
         self.progress += 0.12
         self.gladness -= 3
         self.money += 0.10
 
 
     def to_sleep(self):
-        print(" Я спать ")
+        print(" 😴Я спать😴 ")
         self.gladness += 3
         self.money -= 0.10
 
     def to_chill(self):
-        print(" Время отдыха ")
+        print(" 🎉Время отдыха🎉 ")
         self.gladness += 5
         self.progress -= 0.1
-        self.money -= 1
+        self.money -= 10
 
     def to_work(self):
-        print(" Время работы ")
+        print(" 👩‍💻Время работы👩‍💻 ")
         self.gladness -= 1
         self.progress += 0.1
         self.money += 10

@@ -33,23 +33,23 @@ class Student:
 
     def is_alive(self):
         if self.progress < -0.5:
-            print("                   ВОН…!")
+            print("⬆❌                   ВОН…!         ❌⬆")
             self.alive = False
         elif self.gladness <= 0:
-            print("               Депрессия…!")
+            print("⬆❌               Депрессия…!         ❌⬆")
             self.alive = False
         elif self.progress > 5:
-            print("                Автомат…!")
+            print("⬆❌                Автомат…!         ❌⬆")
             self.alive = False
         elif self.money <= 0:
-            print("         Нет денег-нет учёбы...!")
+            print("⬆❌         Нет денег-нет учёбы...!         ❌⬆")
             self.alive = False
 
     def end_of_day(self):
         print("---------------------------------------")
-        print(f"Радость = {self.gladness}")
-        print(f"Прогресс = {round(self.progress, 2)}")
-        print(f"Деньги = {round(self.money, 2)}")
+        print(f"😂Радость = {self.gladness}")
+        print(f"⬆⬆Прогресс = {round(self.progress, 2)}")
+        print(f"💵Деньги = {round(self.money, 2)}")
         print("---------------------------------------")
 
     def live(self, day):
@@ -67,9 +67,9 @@ class Student:
         self.end_of_day()
         self.is_alive()
 
-nick = Student(name="Ника")
-kate = Student(name="Кейт")
-Misha = Student(name="Миши")
+nick = Student(name="👨Ника👨")
+kate = Student(name="👩Кейт👩")
+Misha = Student(name="👦Миши👦")
 for day in range(365):
     if nick.alive == False:
         break

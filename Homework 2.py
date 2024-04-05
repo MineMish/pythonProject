@@ -70,6 +70,7 @@ class Student:
 nick = Student(name="👨Ника👨")
 kate = Student(name="👩Кейт👩")
 Misha = Student(name="👦Миши👦")
+Anna= Student(name="👩Анны👩")
 for day in range(365):
     if nick.alive == False:
         break
@@ -80,3 +81,6 @@ for day in range(365):
     if Misha.alive == False:
         break
     Misha.live(day)
+    if Anna.alive == False:
+        break
+    Anna.live(day)

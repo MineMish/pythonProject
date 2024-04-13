@@ -7,7 +7,7 @@ class Drawing:
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.textures = "64 textures"
-class Game(Drawing, Code):
+class  Game(Drawing, Code):
     def print_info(self):
 #        print(self.version)
         print(self.textures)

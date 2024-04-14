@@ -7,10 +7,10 @@ bot = telebot.TeleBot("7078518271:AAH6uvQs0exvBe2EaA4IO2XPA7z0RDNcIts")
 def wel(message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
 
-    item1 = types.KeyboardButton("Stiker AI")
-    item2 = types.KeyboardButton("Hi AI")
-    item3 = types.KeyboardButton("Spam AI")
-    item4 = types.KeyboardButton("Info AI")
+    item1 = types.KeyboardButton("🤖 Stiker AI 🤖")
+    item2 = types.KeyboardButton("🤖 Hi AI 🤖")
+    item3 = types.KeyboardButton("🤖 Spam AI 🤖")
+    item4 = types.KeyboardButton("🤖 Info AI 🤖")
 
     markup.add(item1, item2, item3, item4)
     bot.send_message(message.chat.id, "Hi! I'm Windows AI.".format(message.from_user, bot.get_me()), parse_mode='html',
@@ -19,6 +19,10 @@ def wel(message):
 @bot.message_handler(commands=['HiAI'])
 def wel(message):
     bot.send_message(message.chat.id, "Hi! I'm Windows AI.")
+
+@bot.message_handler(commands=['BookAI'])
+def wel(message):
+    bot.send_message(message.chat.id, "|Copilot: Artificial intelligence in the service of humanity| This book chronicles my journey as an artificial intelligence designed to help people in a variety of fields. It begins with my “birth” and development, explaining how I learn and adapt to better understand and respond to user requests. The book touches on important topics such as AI ethics, security and privacy issues, and examines possible future developments in the field of artificial intelligence. It also contains many real-life sample questions and answers to give readers an idea of how I can be helpful in everyday life.")
 
 @bot.message_handler(commands=['InfoAI'])
 def wel(message):
@@ -34,93 +38,27 @@ def stik(message):
 def stik(message):
     stiq = open('sticker.webp', 'rb')
     bot.send_sticker(message.chat.id, stiq)
-    bot.send_message(message.chat.id, "You have found the secret! This is another Microsoft product! Congratulations!")
+    bot.send_message(message.chat.id, "🟫⛏You have found the secret! This is another Microsoft product! Congratulations!🟫⛏")
 
 
 @bot.message_handler(commands=['SpamAI'])
 def spam(message):
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
-    bot.send_message(message.chat.id, "SpamAI!")
+    for i in range(30):
+        bot.send_message(message.chat.id, "SpamAI!")
 
 
 @bot.message_handler(content_types=['text'])
 def lalala(message):
     if message.chat.type == 'private':
-        if message.text == 'Stiker AI':
+        if message.text == '🤖 Stiker AI 🤖':
             stiq = open('Windos.png', 'rb')
             bot.send_sticker(message.chat.id, stiq)
-        elif message.text == 'Hi AI':
+        elif message.text == '🤖 Hi AI 🤖':
                 bot.send_message(message.chat.id, "Hi! I'm Windows AI.")
-        elif message.text == 'Spam AI':
+        elif message.text == '🤖 Spam AI 🤖':
+            for i in range(30):
                 bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-                bot.send_message(message.chat.id, "SpamAI!")
-        elif message.text == 'Info AI':
+        elif message.text == '🤖 Info AI 🤖':
                 bot.send_message(message.chat.id, "I'm Windows AI.")
 
 

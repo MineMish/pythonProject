@@ -16,8 +16,9 @@ def wel(message):
     item7 = types.KeyboardButton("🤖 Sport AI 🤖")
     item8 = types.KeyboardButton("🤖 Life AI 🤖")
     item9 = types.KeyboardButton("🤖 Friends AI 🤖")
+    item10 = types.KeyboardButton("🤖 Audio AI 🤖")
 
-    markup.add(item1, item2, item3, item4, item5, item6, item7, item8, item9)
+    markup.add(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10)
     bot.send_message(message.chat.id, "Hi! I'm Windows AI. /InfoAI - viewing commands and their purposes, about AI bot!".format(message.from_user, bot.get_me()), parse_mode='html',
                      reply_markup=markup)
 
@@ -84,6 +85,11 @@ def stik(message):
     stiq = open('Windos.png', 'rb')
     bot.send_sticker(message.chat.id, stiq)
 
+@bot.message_handler(commands=['AudioAI'])
+def stik(message):
+    au = open('MusicWinAI.mp3', 'rb')
+    bot.send_audio(message.chat.id, au)
+
 @bot.message_handler(commands=['LifeAI'])
 def life(message):
     bot.send_message(message.chat.id, "As an artificial intelligence, I do not have a life in the usual sense of the word. I have no personal experiences, emotions or consciousness. My 'life' is to help users by answering their questions and completing tasks within my capabilities. I am designed to be helpful, informative and support users in their aspirations and interests. 🤖✨")
@@ -112,6 +118,9 @@ def lalala(message):
         if message.text == '🤖 Stiker AI 🤖':
             stiq = open('Windos.png', 'rb')
             bot.send_sticker(message.chat.id, stiq)
+        elif message.text == '🤖 Audio AI 🤖':
+            au = open('MusicWinAI.mp3', 'rb')
+            bot.send_audio(message.chat.id, au)
         elif message.text == '🤖 Hi AI 🤖':
                 bot.send_message(message.chat.id, "Hi! I'm Windows AI.")
         elif message.text == '🤖 Spam AI 🤖':

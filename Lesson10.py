@@ -86,7 +86,7 @@ def stik(message):
     bot.send_sticker(message.chat.id, stiq)
 
 @bot.message_handler(commands=['AudioAI'])
-def stik(message):
+def audio(message):
     au = open('MusicWinAI.mp3', 'rb')
     bot.send_audio(message.chat.id, au)
 

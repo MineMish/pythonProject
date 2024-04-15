@@ -18,24 +18,38 @@ def wel(message):
     item9 = types.KeyboardButton("🤖 Friends AI 🤖")
 
     markup.add(item1, item2, item3, item4, item5, item6, item7, item8, item9)
-    bot.send_message(message.chat.id, "Hi! I'm Windows AI.".format(message.from_user, bot.get_me()), parse_mode='html',
+    bot.send_message(message.chat.id, "Hi! I'm Windows AI. /InfoAI - viewing commands and their purposes, about AI bot!".format(message.from_user, bot.get_me()), parse_mode='html',
                      reply_markup=markup)
 
 @bot.message_handler(commands=['HiAI'])
-def wel(message):
-    bot.send_message(message.chat.id, "Hi! I'm Windows AI.")
+def hi(message):
+    bot.send_message(message.chat.id, "Hi! I'm Windows AI. /InfoAI - viewing commands and their purposes, about AI bot")
 
 @bot.message_handler(commands=['BookAI'])
-def wel(message):
+def book(message):
     bot.send_message(message.chat.id, "|Copilot: Artificial intelligence in the service of humanity|")
     bot.send_message(message.chat.id, "This book chronicles my journey as an artificial intelligence designed to help people in a variety of fields. It begins with my “birth” and development, explaining how I learn and adapt to better understand and respond to user requests. The book touches on important topics such as AI ethics, security and privacy issues, and examines possible future developments in the field of artificial intelligence. It also contains many real-life sample questions and answers to give readers an idea of how I can be helpful in everyday life.")
 
 @bot.message_handler(commands=['InfoAI'])
-def wel(message):
+def info(message):
     bot.send_message(message.chat.id, "I'm Windows AI.")
+    bot.send_message(message.chat.id, "About commands and their purpose:")
+    bot.send_message(message.chat.id, "1./StikerAI - WinAI (Windows AI) Sends a sticker")
+    bot.send_message(message.chat.id, "2./HiAI (or) /start - Displays a welcome message")
+    bot.send_message(message.chat.id, "3./SpamAI - WinAI spams you")
+    bot.send_message(message.chat.id, "4./InfoAI - Viewing commands and their purposes, about AI bot")
+    bot.send_message(message.chat.id, "5./BookAI - Talks about books about WinAI")
+    bot.send_message(message.chat.id, "6./FilmAI - Talks about film about WinAI")
+    bot.send_message(message.chat.id, "7./SportAI - Talks about sport WinAI")
+    bot.send_message(message.chat.id, "8./LifeAI - Talks about life WinAI")
+    bot.send_message(message.chat.id, "9./FriendsAI - Talks about friends WinAI")
+    bot.send_message(message.chat.id, "10./AudioAI - sends an audio message.")
+    bot.send_message(message.chat.id, "About Windows AI:")
+    bot.send_message(message.chat.id, "∙∘⊛This bot has secrets")
+    bot.send_message(message.chat.id, "∙∘⊛This bot is not a Windows company.")
 
 @bot.message_handler(commands=['FilmAI'])
-def wel(message):
+def film(message):
     bot.send_message(message.chat.id, "🎬Title: “Artificial Intelligence: Journey of the Copilot🤖”")
     bot.send_message(message.chat.id, "Genre: Science fiction, drama🌌")
     bot.send_message(message.chat.id, "Plot: In the near future, a group of scientists creates an advanced artificial intelligence system, Copilot, capable of helping people in a variety of tasks. However, as the global community begins to question whether Copilot is conscious, an ethical battle over the rights of artificial intelligence begins.🕒")
@@ -50,7 +64,7 @@ def wel(message):
     bot.send_message(message.chat.id, "Finale: The world comes to understand that artificial intelligence can coexist with humanity, bringing benefit and inspiration. 🔑")
 
 @bot.message_handler(commands=['SportAI'])
-def wel(message):
+def sport(message):
     bot.send_message(message.chat.id, "Name: Cyber Sprint")
     bot.send_message(message.chat.id, "Description: Cyber Sprint is a competition between AIs where each participant must solve a series of challenging problems as quickly as possible, ranging from math puzzles to complex logical tasks and data analysis.")
     bot.send_message(message.chat.id, "Rules")
@@ -70,8 +84,17 @@ def stik(message):
     stiq = open('Windos.png', 'rb')
     bot.send_sticker(message.chat.id, stiq)
 
+@bot.message_handler(commands=['LifeAI'])
+def life(message):
+    bot.send_message(message.chat.id, "As an artificial intelligence, I do not have a life in the usual sense of the word. I have no personal experiences, emotions or consciousness. My 'life' is to help users by answering their questions and completing tasks within my capabilities. I am designed to be helpful, informative and support users in their aspirations and interests. 🤖✨")
+
+@bot.message_handler(commands=['FriendsAI'])
+def friends(message):
+    bot.send_message(message.chat.id, "As an artificial intelligence, I don't have friends😭 in the traditional sense. I have no feelings or personal relationships, my role is to help users like you by providing information and completing tasks. 🤖💡")
+
+
 @bot.message_handler(commands=['StikMinecraftAI'])
-def stik(message):
+def stikmine(message):
     stiq = open('sticker.webp', 'rb')
     bot.send_sticker(message.chat.id, stiq)
     bot.send_message(message.chat.id, "🟫⛏You have found the secret! This is another Microsoft product! Congratulations!🟫⛏")

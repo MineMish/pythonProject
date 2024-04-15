@@ -45,8 +45,8 @@ def info(message):
     bot.send_message(message.chat.id, "9./FriendsAI - Talks about friends WinAI")
     bot.send_message(message.chat.id, "10./AudioAI - sends an audio message.")
     bot.send_message(message.chat.id, "About Windows AI:")
-    bot.send_message(message.chat.id, "∙∘⊛This bot has secrets")
-    bot.send_message(message.chat.id, "∙∘⊛This bot is not a Windows company.")
+    bot.send_message(message.chat.id, "∙∘⊛This bot has secrets⊛∘∙")
+    bot.send_message(message.chat.id, "∙∘⊛This bot is not a Windows company.⊛∘∙")
 
 @bot.message_handler(commands=['FilmAI'])
 def film(message):

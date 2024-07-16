@@ -17,8 +17,9 @@ def wel(message):
     item8 = types.KeyboardButton("🤖 Life AI 🤖")
     item9 = types.KeyboardButton("🤖 Friends AI 🤖")
     item10 = types.KeyboardButton("🤖 Audio AI 🤖")
+    item11 = types.KeyboardButton("🤖 Super Spam AI 🤖")
 
-    markup.add(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10)
+    markup.add(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11)
     bot.send_message(message.chat.id, "Hi! I'm Windows AI. /InfoAI - viewing commands and their purposes, about AI bot!".format(message.from_user, bot.get_me()), parse_mode='html',
                      reply_markup=markup)
 
@@ -111,6 +112,11 @@ def spam(message):
     for i in range(30):
         bot.send_message(message.chat.id, "SpamAI!")
 
+@bot.message_handler(commands=['SuperSpamAI'])
+def superspam(message):
+    for i in range(60):
+        bot.send_message(message.chat.id, "SuperSpamAI!")
+
 
 @bot.message_handler(content_types=['text'])
 def lalala(message):
@@ -126,6 +132,9 @@ def lalala(message):
         elif message.text == '🤖 Spam AI 🤖':
             for i in range(30):
                 bot.send_message(message.chat.id, "SpamAI!")
+        elif message.text == '🤖 Super Spam AI 🤖':
+            for i in range(60):
+                bot.send_message(message.chat.id, "SuperSpamAI!")
         elif message.text == '🤖 Info AI 🤖':
                 bot.send_message(message.chat.id, "I'm Windows AI.")
         elif message.text == '🤖 Book AI 🤖':

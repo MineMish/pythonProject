@@ -1,7 +1,8 @@
 import telebot
 from telebot import types
+import Secret
 
-bot = telebot.TeleBot("7078518271:AAH6uvQs0exvBe2EaA4IO2XPA7z0RDNcIts")
+bot = telebot.TeleBot(Secret.token)
 
 @bot.message_handler(commands=['start'])
 def wel(message):
@@ -18,14 +19,19 @@ def wel(message):
     item9 = types.KeyboardButton("🤖 Friends AI 🤖")
     item10 = types.KeyboardButton("🤖 Audio AI 🤖")
     item11 = types.KeyboardButton("🤖 Super Spam AI 🤖")
+    item12 = types.KeyboardButton("🤖 Reklama AI 🤖")
 
-    markup.add(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11)
+    markup.add(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12)
     bot.send_message(message.chat.id, "Hi! I'm Windows AI. /InfoAI - viewing commands and their purposes, about AI bot!".format(message.from_user, bot.get_me()), parse_mode='html',
                      reply_markup=markup)
 
 @bot.message_handler(commands=['HiAI'])
 def hi(message):
     bot.send_message(message.chat.id, "Hi! I'm Windows AI. /InfoAI - viewing commands and their purposes, about AI bot")
+
+@bot.message_handler(commands=['ReklamaAI'])
+def reklama(message):
+    bot.send_message(message.chat.id, "Hi! I'm Windows AI. This bot was created by user MineMish! Here is his telegram channel: @MineMisha")
 
 @bot.message_handler(commands=['BookAI'])
 def book(message):
@@ -46,9 +52,11 @@ def info(message):
     bot.send_message(message.chat.id, "8./LifeAI - Talks about life WinAI")
     bot.send_message(message.chat.id, "9./FriendsAI - Talks about friends WinAI")
     bot.send_message(message.chat.id, "10./AudioAI - sends an audio message.")
+    bot.send_message(message.chat.id, "11./SuperSpamAI - WinAI super spams you.")
+    bot.send_message(message.chat.id, "12./ReklamaAI - send you advertisements.")
     bot.send_message(message.chat.id, "About Windows AI:")
     bot.send_message(message.chat.id, "∙∘⊛This bot has secrets⊛∘∙")
-    bot.send_message(message.chat.id, "∙∘⊛This bot is not a Windows company.⊛∘∙")
+    bot.send_message(message.chat.id, "∙∘⊛This bot is not a Windows company⊛∘∙")
 
 @bot.message_handler(commands=['FilmAI'])
 def film(message):
@@ -137,6 +145,8 @@ def lalala(message):
                 bot.send_message(message.chat.id, "SuperSpamAI!")
         elif message.text == '🤖 Info AI 🤖':
                 bot.send_message(message.chat.id, "I'm Windows AI.")
+        elif message.text == '🤖 Reklama AI 🤖':
+                bot.send_message(message.chat.id, "Hi! I'm Windows AI. This bot was created by user MineMish! Here is his telegram channel: @MineMisha")
         elif message.text == '🤖 Book AI 🤖':
             bot.send_message(message.chat.id, "|Copilot: Artificial intelligence in the service of humanity|")
             bot.send_message(message.chat.id,

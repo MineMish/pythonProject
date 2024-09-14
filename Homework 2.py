@@ -9,7 +9,7 @@ class Student:
 
     def to_study(self):
         print(" 👨‍🎓Время учёбы👨‍🎓 ")
-        self.progress += 0.12
+        self.progress += 1
         self.gladness -= 3
         self.money += 0.10
 
@@ -22,26 +22,26 @@ class Student:
     def to_chill(self):
         print(" 🎉Время отдыха🎉 ")
         self.gladness += 5
-        self.progress -= 0.1
+        self.progress -= 1
         self.money -= 10
 
     def to_work(self):
         print(" 👩‍💻Время работы👩‍💻 ")
         self.gladness -= 1
-        self.progress += 0.1
+        self.progress += 0.5
         self.money += 10
 
     def is_alive(self):
-        if self.progress < -0.5:
+        if self.progress < -10.5:
             print("⬆❌                   ВОН…!         ❌⬆")
             self.alive = False
-        elif self.gladness <= 0:
+        elif self.gladness <= -5:
             print("⬆❌               Депрессия…!         ❌⬆")
             self.alive = False
-        elif self.progress > 5:
-            print("⬆❌                Автомат…!         ❌⬆")
+        elif self.progress > 50:
+            print("⬆✔                Автомат…!                ✔⬆")
             self.alive = False
-        elif self.money <= 0:
+        elif self.money <= -100:
             print("⬆❌         Нет денег-нет учёбы...!         ❌⬆")
             self.alive = False
 
@@ -71,7 +71,7 @@ nick = Student(name="👨Ника👨")
 kate = Student(name="👩Кейт👩")
 Misha = Student(name="👦Миши👦")
 Anna= Student(name="👩Анны👩")
-for day in range(365):
+for day in range(1460):
     if nick.alive == False:
         break
     nick.live(day)

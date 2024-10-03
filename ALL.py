@@ -13,4 +13,4 @@ keyboard.add_hotkey("0", change)
 while True:
     if work:
         mouse.click(button='left')
-        time.sleep(0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001)
+        time.sleep(0.000001)

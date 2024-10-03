@@ -89,7 +89,7 @@ def sport(message):
     bot.send_message(message.chat.id, "Entertainment: Viewers will enjoy watching AI strategies, their ability to adapt to new challenges and improve their algorithms in real time. Competitions can be broadcast with commentary from experts who explain the actions of AI and their potential impact on the future of technology.")
 
 
-@bot.message_handler(commands=['StikAI'])
+@bot.message_handler(commands=['StikerAI'])
 def stik(message):
     stiq = open('Windos.png', 'rb')
     bot.send_sticker(message.chat.id, stiq)
